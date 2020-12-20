@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>contact us page</title>
+    </head>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            line-height: 1.5;
+            box-sizing: border-box;
+            background-color:#9ee1f5;/*add*/
+            color:rgba(248, 248, 248, 0.938);
+        }
+        #fancy-form{
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+        /*container utility*/
+        #fancy-form .container{
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        /* main div  */
+        .form-section{
+            margin-top: 5rem;
+            display: grid;
+            grid-gap: 5rem;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        /* form left styling cr */
+        .form-right h1{
+            color: #000000;
+            padding: 0;
+            margin:0;
+        }
+        .form-right h4{
+            padding: 0;
+            margin: 0;
+            color: #000000;
+        }
+        .line{
+            border-bottom: 2px solid rgb(12, 168, 207);
+            width:8%;
+            margin-left: 0;
+        }
+        p{
+            color: rgb(0, 0, 0);
+        }
+        .form-right span{
+            color: #666666;
+            font-weight: bold;
+}
+
+        .form-right hr{
+            width: 25rem;
+            margin-left: 0;
+            border:1px solid rgb(53, 53, 52)
+        }
+        /* social media icon styling */
+        .fa{
+            padding: 8px;
+            font-size: 18px;
+            width: 50px;
+            text-align: center;
+            text-decoration: none;
+            color:  #000000;
+        }
+        .fa:hover{
+            color: rgb(16, 135, 190);
+        }
+        /* form right styling */
+        .form-left h1{
+            color: #000000;
+            padding: 0;
+            margin: 0;
+        }
+        form{
+            padding-top: 2rem;
+        }
+        form h5{
+            padding: 0;
+            margin: 0;
+            color:  #000000;
+        }
+        form input{
+            padding: 0.6rem;
+            width: 27rem;
+            border: none;
+            background-color:  rgba(136, 133, 133, 0.3);
+            color:  #000000;
+            outline:none;
+            border: none;
+        }
+        form textarea{
+            padding: 0.6rem;
+            width: 27rem;
+            border: none;
+            background-color: rgba(136, 133, 133, 0.3);
+            color: #000000;
+            outline:none;
+            border: none;
+        }
+        form button{
+            width: 9rem;
+            background: rgb(12, 168, 207);
+            padding: 5px;
+            outline: none;
+            border-color: transparent;
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-align: center;
+            margin-top: 0.9rem;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        /*media queries*/
+        @media(max-width: 968px){
+            #fancy-form .form-section{
+                display: block;
+                width:100%;
+                text-align: left;
+            }
+            /*background image*/
+            #fancy-form{
+            background-size: cover;
+            background-position: center;
+            height: auto;
+            width: 100%;
+            }
+            .form-section .form-right{
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+            }
+            /*social media icons*/
+            .fa{
+                padding: 8px;
+                font-size: 18px;
+                width: 30px;
+                text-align: center;
+                text-decoration: none;
+                color: #000000;
+            }
+            
+             
+        }
+    </style>
+    <body>
+        <section id="fancy-form">
+            <div class="container">
+                <div class="form-section">
+            <!--form left-->
+            <div class="form-left">
+                <h1>Contact Us</h1>
+                <div class="line"></div>
+                <!--line-->
+                <form action="">
+                    <h5>NAME</h5>
+                    <input type="text"required id="name"><br><br>
+                    <h5>EMAIL</h5>
+                    <input type="email"required id="email"><br><br>
+                    <h5>PHONE</h5>
+                    <input type="number"><br><br>
+                    <h5>YOUR MESSAGE</h5>
+                    <textarea name="message" id="mess" cols="50" rows="7"></textarea><br>
+                    <button onclick="responce()" type="submit">Send</button><br>
+
+            </div>
+            <!--form right-->
+            <div class="form-right">
+                <h1>Get In Touch</h1>
+                <div class="line"></div>
+                <p><b>Contact Us For latest new designs and updates.</b></p>
+                <!--first heading-->
+                <h4>ADDRESS</h4>
+                <span>123, Main Street, Mumbai 400003</span>
+                <hr><br><br>
+
+                 <!--second heading-->
+                 <h4>PHONE</h4>
+                 <span>(+1)123 456 7890</span>
+                 <hr><br><br>
+
+                  <!--third heading-->
+                <h4>EMAIL</h4>
+                <span>elitedecor@gmail.com</span>
+                <hr><br>
+                <!--social media icons-->
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-google"></a>
+                <a href="#" class="fa fa-youtube"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+
+                </form>
+            </div>
+                </div>
+
+            </div>
+
+        </section>
+    <script>
+        function responce(){
+        alert("your responce has been recorded!!!");
+        var s1=document.getElementById("mess").value;
+        var s2=document.getElementById("name").value;
+        var s3=document.getElementById("email").value;
+        document.write(" name is"+" "+s2+".....  ");
+
+        document.write(" email is"+" "+s3+"....  ");
+
+        document.write("your message is"+" "+s1);
+        }
+    </script>
+    </body>
+</html>
